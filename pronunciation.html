@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Pronunciation: A and AA</title>
+<style>
+body{font-family:Segoe UI,Arial,sans-serif;background:#f4f6f8;margin:0;padding:24px;color:#333}
+.container{max-width:1100px;margin:auto}
+h1{text-align:center;margin:0 0 8px;color:#1f4e79}
+.subtitle{text-align:center;color:#666;margin:0 0 24px}
+h2{color:#1f4e79;margin:28px 0 12px}
+table{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+th,td{border:1px solid #ddd;padding:12px;text-align:center;vertical-align:middle}
+th{background:#1f4e79;color:#fff}
+.word{display:inline-block;color:#1565c0;font-weight:700;cursor:pointer;padding:6px 10px;border-radius:8px}
+.word:hover{background:#dceeff}.word.playing{background:#4caf50;color:#fff}
+.hindi{font-size:1.05em}.ipa{font-family:Consolas,monospace;font-size:.92em}
+@media(max-width:800px){body{padding:12px}table,thead,tbody,tr,th,td{display:block}thead{display:none}tr{margin-bottom:16px;border:1px solid #ccc}td{text-align:right;padding-left:45%;position:relative}td:before{position:absolute;left:10px;font-weight:bold;text-align:left}#overview td:nth-child(1):before{content:"German letters"}#overview td:nth-child(2):before{content:"Pronunciation context"}#overview td:nth-child(3):before{content:"Hindi equivalent"}#overview td:nth-child(4):before{content:"German examples"}#overview td:nth-child(5):before{content:"Hindi breakdown"}#examples td:nth-child(1):before{content:"Letter"}#examples td:nth-child(2):before{content:"German word"}#examples td:nth-child(3):before{content:"English meaning"}#examples td:nth-child(4):before{content:"Hindi"}#examples td:nth-child(5):before{content:"IPA"}}
+</style>
+</head>
+<body>
+<main class="container">
+<h1>German Pronunciation</h1>
+<p class="subtitle">Letters A and AA</p>
+
+<table id="overview">
+<thead><tr><th>German Letters</th><th>Pronunciation Context</th><th>Hindi Equivalent</th><th>German Examples</th><th>Hindi Pronunciation Breakdown</th></tr></thead>
+<tbody><tr><td>A, AA</td><td>Always long or short “ah”</td><td class="hindi">आ</td><td>Anton, Haar, Paar</td><td class="hindi">आन्टोन, हार, पार</td></tr></tbody>
+</table>
+
+<h2>Examples</h2>
+<table id="examples">
+<thead><tr><th>Letter</th><th>German Word</th><th>English Meaning</th><th>Hindi</th><th>IPA</th></tr></thead>
+<tbody>
+<tr><td>A</td><td><span class="word" onclick="play(this,'sounds/ch1/De-Apfel2.ogg')">🔊 Apfel 🍎 <small>Ap-fel</small></span></td><td>Apple</td><td class="hindi">आप-फ</td><td class="ipa">/ˈapfl̩/</td></tr>
+<tr><td>A</td><td><span class="word" onclick="play(this,'sounds/ch1/De-Auge.ogg')">🔊 Auge 👁️ <small>Au-ge</small></span></td><td>Eye</td><td class="hindi">औ-ग</td><td class="ipa">/ˈaʊ̯ɡə/</td></tr>
+<tr><td>A</td><td><span class="word" onclick="play(this,'sounds/ch1/De-Antwort2.ogg')">🔊 Antwort 💬 <small>Ant-wort</small></span></td><td>Answer</td><td class="hindi">अंट-वोर्ट</td><td class="ipa">/ˈantvɔʁt/</td></tr>
+<tr><td>AA</td><td><span class="word" onclick="play(this,'sounds/ch1/De-Staat.ogg')">🔊 Staat 🏛️</span></td><td>State / Country</td><td class="hindi">स्टाट</td><td class="ipa">/ʃtaːt/</td></tr>
+<tr><td>AA</td><td><span class="word" onclick="play(this,'sounds/ch1/De-Saal.ogg')">🔊 Saal 🏢</span></td><td>Hall / Large room</td><td class="hindi">झा-ए</td><td class="ipa">/zaːl/</td></tr>
+</tbody>
+</table>
+</main>
+<script>
+let audio=null;
+function play(el,file){
+ if(audio){audio.pause();audio.currentTime=0;document.querySelectorAll('.word').forEach(x=>x.classList.remove('playing'));}
+ audio=new Audio(file); audio.playbackRate=.75; el.classList.add('playing');
+ audio.onended=()=>el.classList.remove('playing'); audio.play();
+}
+</script>
+</body>
+</html>
