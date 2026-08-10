@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>German Pronunciation: A and AA</title>
+<title>German Pronunciation</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
 body{font-family:Segoe UI,Arial,sans-serif;background:#f4f6f8;margin:0;padding:24px;color:#333}
 .container{max-width:1100px;margin:auto}
@@ -16,21 +17,24 @@ th{background:#1f4e79;color:#fff}
 .word{display:inline-block;color:#1565c0;font-weight:700;cursor:pointer;padding:6px 10px;border-radius:8px}
 .word:hover{background:#dceeff}.word.playing{background:#4caf50;color:#fff}
 .hindi{font-size:1.05em}.ipa{font-family:Consolas,monospace;font-size:.92em}
-@media(max-width:800px){body{padding:12px}table,thead,tbody,tr,th,td{display:block}thead{display:none}tr{margin-bottom:16px;border:1px solid #ccc}td{text-align:right;padding-left:45%;position:relative}td:before{position:absolute;left:10px;font-weight:bold;text-align:left}#overview td:nth-child(1):before{content:"German letters"}#overview td:nth-child(2):before{content:"Pronunciation context"}#overview td:nth-child(3):before{content:"Hindi equivalent"}#overview td:nth-child(4):before{content:"German examples"}#overview td:nth-child(5):before{content:"Hindi breakdown"}#examples td:nth-child(1):before{content:"Letter"}#examples td:nth-child(2):before{content:"German word"}#examples td:nth-child(3):before{content:"English meaning"}#examples td:nth-child(4):before{content:"Hindi"}#examples td:nth-child(5):before{content:"IPA"}}
+@media(max-width:800px){body{padding:12px}table,thead,tbody,tr,th,td{display:block}thead{display:none}tr{margin-bottom:16px;border:1px solid #ccc}td{text-align:right;padding-left:45%;position:relative}td:before{position:absolute;left:10px;font-weight:bold;text-align:left}.rule-table td:nth-child(1):before{content:"German letters"}.rule-table td:nth-child(2):before{content:"Pronunciation context"}.rule-table td:nth-child(3):before{content:"Hindi equivalent"}.rule-table td:nth-child(4):before{content:"German examples"}.rule-table td:nth-child(5):before{content:"Hindi breakdown"}.example-table td:nth-child(1):before{content:"Letter"}.example-table td:nth-child(2):before{content:"German word"}.example-table td:nth-child(3):before{content:"English meaning"}.example-table td:nth-child(4):before{content:"Hindi"}.example-table td:nth-child(5):before{content:"IPA"}.combo-table td:nth-child(1):before{content:"Letter combo"}.combo-table td:nth-child(2):before{content:"German word"}.combo-table td:nth-child(3):before{content:"English meaning"}.combo-table td:nth-child(4):before{content:"IPA"}}
 </style>
 </head>
 <body>
 <main class="container">
 <h1>German Pronunciation</h1>
-<p class="subtitle">Letters A and AA</p>
+<p class="subtitle">German letter and vowel-combination sounds</p>
 
-<table id="overview">
+<h2>A, AA</h2>
+<table class="rule-table">
 <thead><tr><th>German Letters</th><th>Pronunciation Context</th><th>Hindi Equivalent</th><th>German Examples</th><th>Hindi Pronunciation Breakdown</th></tr></thead>
-<tbody><tr><td>A, AA</td><td>Always long or short “ah”</td><td class="hindi">आ</td><td>Anton, Haar, Paar</td><td class="hindi">आन्टोन, हार, पार</td></tr></tbody>
+<tbody>
+<tr><td>A, AA</td><td>Always long or short “ah”</td><td class="hindi">आ</td><td>Anton, Haar, Paar</td><td class="hindi">आन्टोन, हार, पार</td></tr>
+</tbody>
 </table>
 
 <h2>Examples</h2>
-<table id="examples">
+<table class="example-table">
 <thead><tr><th>Letter</th><th>German Word</th><th>English Meaning</th><th>Hindi</th><th>IPA</th></tr></thead>
 <tbody>
 <tr><td>A</td><td><span class="word" onclick="play(this,'sounds/ch1/De-Apfel2.ogg')">🔊 Apfel 🍎 <small>Ap-fel</small></span></td><td>Apple</td><td class="hindi">आप-फ</td><td class="ipa">/ˈapfl̩/</td></tr>
@@ -38,6 +42,44 @@ th{background:#1f4e79;color:#fff}
 <tr><td>A</td><td><span class="word" onclick="play(this,'sounds/ch1/De-Antwort2.ogg')">🔊 Antwort 💬 <small>Ant-wort</small></span></td><td>Answer</td><td class="hindi">अंट-वोर्ट</td><td class="ipa">/ˈantvɔʁt/</td></tr>
 <tr><td>AA</td><td><span class="word" onclick="play(this,'sounds/ch1/De-Staat.ogg')">🔊 Staat 🏛️</span></td><td>State / Country</td><td class="hindi">स्टाट</td><td class="ipa">/ʃtaːt/</td></tr>
 <tr><td>AA</td><td><span class="word" onclick="play(this,'sounds/ch1/De-Saal.ogg')">🔊 Saal 🏢</span></td><td>Hall / Large room</td><td class="hindi">झा-ए</td><td class="ipa">/zaːl/</td></tr>
+</tbody>
+</table>
+
+<h2>EI, AI</h2>
+<table class="rule-table">
+<thead><tr><th>German Letters</th><th>Pronunciation Context</th><th>Hindi Equivalent</th><th>German Examples</th><th>Hindi Pronunciation Breakdown</th></tr></thead>
+<tbody>
+<tr><td>EI, AI</td><td>Combined vowel sound</td><td class="hindi">आई</td><td>Mai, bei, Eis</td><td class="hindi">माई, बाई, आइस</td></tr>
+</tbody>
+</table>
+
+<h2>Examples</h2>
+<table class="example-table">
+<thead><tr><th>Letter</th><th>German Word</th><th>English Meaning</th><th>Hindi</th><th>IPA</th></tr></thead>
+<tbody>
+<tr><td>EI / AI</td><td><span class="word" onclick="play(this,'sounds/ch1/De-Zeit2.ogg')">🔊 Zeit ⏱️ <small>साइत</small></span></td><td>Time</td><td class="hindi">साइत</td><td class="ipa">/tsaɪ̯t/</td></tr>
+<tr><td>EI / AI</td><td><span class="word" onclick="play(this,'sounds/ch1/De-Klein.ogg')">🔊 Klein 🤏 <small>क्लाइन</small></span></td><td>Small / Little</td><td class="hindi">क्लाइन</td><td class="ipa">/klaɪ̯n/</td></tr>
+<tr><td>EI / AI</td><td><span class="word" onclick="play(this,'sounds/ch1/De-Saite.ogg')">🔊 Saite 🎸 <small>झाइत</small></span></td><td>String (of an instrument)</td><td class="hindi">झाइत</td><td class="ipa">/ˈzaɪ̯tə/</td></tr>
+<tr><td>EI / AI</td><td><span class="word" onclick="play(this,'sounds/ch1/De-Hain.ogg')">🔊 Hain 🌳 <small>हाईन</small></span></td><td>Grove / Small forest</td><td class="hindi">हाईन</td><td class="ipa">/haɪ̯n/</td></tr>
+</tbody>
+</table>
+
+<h2>A, O, U + CH</h2>
+<table class="rule-table">
+<thead><tr><th>German Letters</th><th>Pronunciation Context</th><th>Hindi Equivalent</th><th>German Examples</th><th>Hindi Pronunciation Breakdown</th></tr></thead>
+<tbody>
+<tr><td>A, O, U + CH</td><td>After A, O, U</td><td class="hindi">ख</td><td>Bach, Buch, doch</td><td class="hindi">बाख, बुख, दोख</td></tr>
+</tbody>
+</table>
+
+<h2>Examples</h2>
+<table class="combo-table">
+<thead><tr><th>Letter Combo</th><th>German Word</th><th>English Meaning</th><th>IPA</th></tr></thead>
+<tbody>
+<tr><td>A + CH</td><td><span class="word" onclick="play(this,'sounds/ch1/De-Nacht2.ogg')">🔊 Nacht 🌙 <small>नाख्त</small></span></td><td>Night</td><td class="ipa">/naχt/</td></tr>
+<tr><td>A + CH</td><td><span class="word" onclick="play(this,'sounds/ch1/De-Dach2.ogg')">🔊 Dach 🏠 <small>ड़ाख</small></span></td><td>Roof</td><td class="ipa">/daχ/</td></tr>
+<tr><td>A + CH</td><td><span class="word" onclick="play(this,'sounds/ch1/De-at-Macht.ogg')">🔊 Macht ⚡ <small>माखत</small></span></td><td>Power / Might</td><td class="ipa">/maχt/</td></tr>
+<tr><td>A + CH</td><td><span class="word" onclick="play(this,'sounds/ch1/De-Drache.ogg')">🔊 Drache 🐉 <small>द्रख</small></span></td><td>Dragon / Kite</td><td class="ipa">/ˈdʁaχə/</td></tr>
 </tbody>
 </table>
 </main>
