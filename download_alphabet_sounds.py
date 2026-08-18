@@ -16,13 +16,22 @@ from urllib.parse import quote, unquote, urlparse
 from urllib.request import Request, urlopen
 
 
-WORDS = [ "Quelle",
-    "Richard", "Siegfried", "Schule", "Eszett", "Theodor", "Ulrich",
-    "Übermut", "Viktor", "Wilhelm", "Xanthippe", "Ypsilon", "Zeppelin",
+
+WORDS = [
+    "zwei",
+    "drei",
+    "vier",
+    "fünf",
+    "sechs",
+    "sieben",
+    "acht",
+    "neun",
+    "zehn",
+    "elf",
+    "zwölf",
 ]
 
-
-USER_AGENT = "GermanLearningAudioDownloader/1.0 (personal learning project)"
+USER_AGENT = "GermanLearningAudio/1.0 (personal learning project)"
 
 
 class MediaLinkParser(HTMLParser):
@@ -111,7 +120,7 @@ def download(url: str, destination: Path, retries: int, timeout: int) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=Path("alphabet_sounds"), help="Download folder")
-    parser.add_argument("--delay", type=float, default=5.0, help="Seconds between words (default: 5)")
+    parser.add_argument("--delay", type=float, default=10.0, help="Seconds between words (default: 5)")
     parser.add_argument("--retries", type=int, default=4, help="Retries for temporary failures (default: 4)")
     parser.add_argument("--timeout", type=int, default=30, help="Request timeout in seconds (default: 30)")
     args = parser.parse_args()

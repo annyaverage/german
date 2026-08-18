@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Alphabet</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+body{font-family:Segoe UI,Arial,sans-serif;background:#f4f6f8;margin:0;padding:24px;color:#333}
+.container{max-width:900px;margin:auto}.back{display:inline-block;margin-bottom:18px;color:#1565c0;font-weight:700;text-decoration:none}.back:hover{text-decoration:underline}
+h1{text-align:center;margin:0 0 8px;color:#1f4e79}.subtitle{text-align:center;color:#666;margin:0 0 24px}
+table{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+th,td{border:1px solid #ddd;padding:12px;text-align:center;vertical-align:middle}th{background:#1f4e79;color:#fff}.letter{font-size:1.15em;font-weight:700}
+.word{display:inline-block;color:#1565c0;font-weight:700;cursor:pointer;padding:6px 10px;border-radius:8px}.word:hover{background:#dceeff}.word.playing{background:#4caf50;color:#fff}
+.unavailable{color:#777;font-style:italic}@media(max-width:600px){body{padding:12px}th,td{padding:9px;font-size:.92em}}
+</style>
+</head>
+<body>
+<main class="container">
+<a class="back" href="index.html">← Table of Contents</a>
+<h1>German Alphabet</h1>
+<p class="subtitle">Click a word to hear its pronunciation.</p>
+<table>
+<thead><tr><th>German</th><th>Phonetic Guide</th><th>Sound</th></tr></thead>
+<tbody>
+<tr><td class="letter">A wie Anton</td><td>AHN-tone</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Anton.ogg')">🔊 Anton</span></td></tr>
+<tr><td class="letter">Ä wie Ärger</td><td>AIR-gehr</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Ärger.ogg')">🔊 Ärger</span></td></tr>
+<tr><td class="letter">B wie Berta</td><td>BARE-tuh</td><td><span class="word" onclick="play(this,'sounds/ch3/Pl-Berta.ogg')">🔊 Berta</span></td></tr>
+<tr><td class="letter">C wie Cäsar</td><td>SAY-zar</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Cäsar.ogg')">🔊 Cäsar</span></td></tr>
+<tr><td class="letter">Ch wie Charlotte</td><td>shar-LOT-tuh</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Charlotte.ogg')">🔊 Charlotte</span></td></tr>
+<tr><td class="letter">D wie Dora</td><td>DORE-uh</td><td><span class="unavailable">Audio not available</span></td></tr>
+<tr><td class="letter">E wie Emil</td><td>ay-MEAL</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Emil.ogg')">🔊 Emil</span></td></tr>
+<tr><td class="letter">F wie Friedrich</td><td>FREED-reech</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Friedrich.ogg')">🔊 Friedrich</span></td></tr>
+<tr><td class="letter">G wie Gustav</td><td>GOOS-tahf</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Gustav.ogg')">🔊 Gustav</span></td></tr>
+<tr><td class="letter">H wie Heinrich</td><td>HINE-reech</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Heinrich.ogg')">🔊 Heinrich</span></td></tr>
+<tr><td class="letter">I wie Ida</td><td>EED-uh</td><td><span class="unavailable">Audio not available</span></td></tr>
+<tr><td class="letter">J wie Julius</td><td>YUL-ee-oos</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Julius.ogg')">🔊 Julius</span></td></tr>
+<tr><td class="letter">K wie Kaufmann</td><td>KOWF-mann</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Kaufmann.ogg')">🔊 Kaufmann</span></td></tr>
+<tr><td class="letter">L wie Ludwig</td><td>LOOD-vig</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Ludwig.ogg')">🔊 Ludwig</span></td></tr>
+<tr><td class="letter">M wie Martha</td><td>MAR-tuh</td><td><span class="unavailable">Audio not available</span></td></tr>
+<tr><td class="letter">N wie Nordpol</td><td>NORT-pole</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Nordpol.ogg')">🔊 Nordpol</span></td></tr>
+<tr><td class="letter">O wie Otto</td><td>AHT-toe</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Otto.ogg')">🔊 Otto</span></td></tr>
+<tr><td class="letter">Ö wie Ökonom</td><td>UEH-ko-nome</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Ökonom.ogg')">🔊 Ökonom</span></td></tr>
+<tr><td class="letter">P wie Paula</td><td>POW-luh</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Paula.ogg')">🔊 Paula</span></td></tr>
+<tr><td class="letter">Q wie Quelle</td><td>KVEL-uh</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Quelle.ogg')">🔊 Quelle</span></td></tr>
+<tr><td class="letter">R wie Richard</td><td>REE-shart</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Richard.ogg')">🔊 Richard</span></td></tr>
+<tr><td class="letter">S wie Siegfried</td><td>SEEG-freed</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Siegfried.ogg')">🔊 Siegfried</span></td></tr>
+<tr><td class="letter">Sch wie Schule</td><td>SHOO-luh</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Schule.ogg')">🔊 Schule</span></td></tr>
+<tr><td class="letter">ß (Eszett)</td><td>ES-TSET</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Eszett.ogg')">🔊 Eszett</span></td></tr>
+<tr><td class="letter">T wie Theodor</td><td>TAY-oh-dore</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Theodor.ogg')">🔊 Theodor</span></td></tr>
+<tr><td class="letter">U wie Ulrich</td><td>OOL-reech</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Ulrich.ogg')">🔊 Ulrich</span></td></tr>
+<tr><td class="letter">Ü wie Übermut</td><td>UEH-ber-moot</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Übermut.ogg')">🔊 Übermut</span></td></tr>
+<tr><td class="letter">V wie Viktor</td><td>VICK-tor</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Viktor.ogg')">🔊 Viktor</span></td></tr>
+<tr><td class="letter">W wie Wilhelm</td><td>VIL-helm</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Wilhelm.ogg')">🔊 Wilhelm</span></td></tr>
+<tr><td class="letter">X wie Xanthippe</td><td>KSAN-tipp-uh</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Xanthippe.ogg')">🔊 Xanthippe</span></td></tr>
+<tr><td class="letter">Y wie Ypsilon</td><td>IPP-see-lohn</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Ypsilon.ogg')">🔊 Ypsilon</span></td></tr>
+<tr><td class="letter">Z wie Zeppelin</td><td>TSEP-puh-leen</td><td><span class="word" onclick="play(this,'sounds/ch3/De-Zeppelin.ogg')">🔊 Zeppelin</span></td></tr>
+</tbody>
+</table>
+</main>
+<!-- <script>
+let audio;
+function play(element, file) {
+  if (audio) { audio.pause(); audio.currentTime = 0; document.querySelectorAll('.word').forEach(word => word.classList.remove('playing')); }
+  audio = new Audio(file);
+  element.classList.add('playing');
+  audio.onended = () => element.classList.remove('playing');
+  audio.play();
+}
+</script> -->
+
+<script>
+let audio=null;
+function play(el,file){
+ if(audio){audio.pause();audio.currentTime=0;document.querySelectorAll('.word').forEach(x=>x.classList.remove('playing'));}
+ audio=new Audio(file); audio.playbackRate=.75; el.classList.add('playing');
+ audio.onended=()=>el.classList.remove('playing'); audio.play();
+}
+</script>
+</body>
+</html>

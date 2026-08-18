@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Numbers (1–12)</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+body{font-family:Segoe UI,Arial,sans-serif;background:#f4f6f8;margin:0;padding:24px;color:#333}
+.container{max-width:900px;margin:auto}.back{display:inline-block;margin-bottom:18px;color:#1565c0;font-weight:700;text-decoration:none}.back:hover{text-decoration:underline}
+h1{text-align:center;margin:0 0 8px;color:#1f4e79}.subtitle{text-align:center;color:#666;margin:0 0 24px}
+.info-box{background:#e3f2fd;border-left:4px solid #1565c0;padding:12px 16px;margin:0 0 20px;border-radius:0 8px 8px 0;font-size:0.95em;color:#0d47a1}
+table{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+th,td{border:1px solid #ddd;padding:12px;text-align:center;vertical-align:middle}th{background:#1f4e79;color:#fff}.numeral{font-size:1.25em;font-weight:700;color:#1f4e79}.german-number{font-size:1.1em;font-weight:700}
+.word{display:inline-block;color:#1565c0;font-weight:700;cursor:pointer;padding:6px 10px;border-radius:8px}.word:hover{background:#dceeff}.word.playing{background:#4caf50;color:#fff}
+.unavailable{color:#777;font-style:italic}@media(max-width:600px){body{padding:12px}th,td{padding:9px;font-size:.92em}}
+</style>
+</head>
+<body>
+<main class="container">
+<a class="back" href="index.html">← Table of Contents</a>
+<h1>German Numbers (1–12)</h1>
+<p class="subtitle">Click a word to hear its pronunciation.</p>
+<div class="info-box">
+💡 <strong>Note:</strong> Numbers 1 to 12 in German have unique root forms; numbers from 13 onward follow systematic compound patterns.
+</div>
+<table>
+<thead>
+<tr>
+<th>Numeral</th>
+<th>German Number</th>
+<th>Pronunciation</th>
+<th>Sound</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="numeral">1</td><td class="german-number">eins</td><td>ainzh (rhymes with eye)</td><td><span class="word" onclick="play(this,'sounds/ch4/De-eins.ogg')">🔊 eins</span></td></tr>
+<tr><td class="numeral">2</td><td class="german-number">zwei</td><td>tsvai</td><td><span class="word" onclick="play(this,'sounds/ch4/De-zwei.ogg')">🔊 zwei</span></td></tr>
+<tr><td class="numeral">3</td><td class="german-number">drei</td><td>drai</td><td><span class="word" onclick="play(this,'sounds/ch4/De-drei.ogg')">🔊 drei</span></td></tr>
+<tr><td class="numeral">4</td><td class="german-number">vier</td><td>feer</td><td><span class="word" onclick="play(this,'sounds/ch4/De-vier.ogg')">🔊 vier</span></td></tr>
+<tr><td class="numeral">5</td><td class="german-number">fünf</td><td>foonf</td><td><span class="word" onclick="play(this,'sounds/ch4/De-fünf.ogg')">🔊 fünf</span></td></tr>
+<tr><td class="numeral">6</td><td class="german-number">sechs</td><td>zehks</td><td><span class="word" onclick="play(this,'sounds/ch4/De-sechs.ogg')">🔊 sechs</span></td></tr>
+<tr><td class="numeral">7</td><td class="german-number">sieben</td><td>ZEE-ben</td><td><span class="word" onclick="play(this,'sounds/ch4/De-sieben.ogg')">🔊 sieben</span></td></tr>
+<tr><td class="numeral">8</td><td class="german-number">acht</td><td>ahkt</td><td><span class="word" onclick="play(this,'sounds/ch4/De-acht.ogg')">🔊 acht</span></td></tr>
+<tr><td class="numeral">9</td><td class="german-number">neun</td><td>noin</td><td><span class="word" onclick="play(this,'sounds/ch4/De-neun.ogg')">🔊 neun</span></td></tr>
+<tr><td class="numeral">10</td><td class="german-number">zehn</td><td>tsehn</td><td><span class="word" onclick="play(this,'sounds/ch4/De-zehn.ogg')">🔊 zehn</span></td></tr>
+<tr><td class="numeral">11</td><td class="german-number">elf</td><td>ehlf</td><td><span class="word" onclick="play(this,'sounds/ch4/De-elf.ogg')">🔊 elf</span></td></tr>
+<tr><td class="numeral">12</td><td class="german-number">zwölf</td><td>tsvoolf</td><td><span class="word" onclick="play(this,'sounds/ch4/De-zwölf.ogg')">🔊 zwölf</span></td></tr>
+</tbody>
+</table>
+</main>
+
+<script>
+let audio=null;
+function play(el,file){
+ if(audio){audio.pause();audio.currentTime=0;document.querySelectorAll('.word').forEach(x=>x.classList.remove('playing'));}
+ audio=new Audio(file); audio.playbackRate=.75; el.classList.add('playing');
+ audio.onended=()=>el.classList.remove('playing'); audio.play();
+}
+</script>
+</body>
+</html>
